@@ -20,20 +20,24 @@ public class CDiem {
 		y = P.y;
 	}
 
+////////////Nhóm phương thức thiết lập////////////
+	// 1. Default Constructor
 	CDiem() {
 		x = 0;
 		y = 0;
 	}
 
+	// 2. Parameterized Constructor
 	CDiem(float xx, float yy) {
 		x = xx;
 		y = yy;
 	}
 
-//	CDiem(CDiem P) {
-//		x = P.x;
-//		y = P.y;
-//	}
+	// 3. Copy Constructor
+	CDiem(CDiem P) {
+		x = P.x;
+		y = P.y;
+	}
 
 	public void Nhap() {
 		Scanner scanner = new Scanner(System.in);
@@ -49,10 +53,6 @@ public class CDiem {
 		System.out.println("Xuat x: " + x);
 		System.out.println("Xuat y: " + y);
 		System.out.println("Toa diem da nhap: (" + x + "," + y + ")");
-	}
-
-	public String toString() {
-		return "(" + x + ", " + y + ")";
 	}
 
 	public float getX() {
@@ -128,5 +128,23 @@ public class CDiem {
 	}
 
 	//////////// Nhóm phương thức xử lý ////////////
+	public float KhoangCachGoc() {
+		return (float) Math.sqrt(x * x + y * y);
+	}
 
+	public float KhoangCach(CDiem P) {
+		return (float) Math.sqrt((x - P.x) * (x - P.x) + (y - P.y) * (y - P.y));
+	}
+
+	public float KhoangCachX(CDiem P) {
+		return (float) Math.abs(x - P.x);
+	}
+
+	public float KhoangCachY(CDiem P) {
+		return (float) Math.abs(y - P.y);
+	}
+
+//	public CDiem DoiXungGoc() {
+//
+//	}
 }
