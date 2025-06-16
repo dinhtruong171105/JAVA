@@ -22,19 +22,18 @@ public class CDiem {
 
 	//////////// Nhóm phương thức thiết lập////////////
 	// 1. Default Constructor
-	CDiem() {
-		x = 0;
-		y = 0;
+	public CDiem() {
+		x = y = 0;
 	}
 
 	// 2. Parameterized Constructor
-	CDiem(float xx, float yy) {
+	public CDiem(float xx, float yy) {
 		x = xx;
 		y = yy;
 	}
 
 	// 3. Copy Constructor
-	CDiem(CDiem P) {
+	public CDiem(CDiem P) {
 		x = P.x;
 		y = P.y;
 	}
@@ -47,11 +46,28 @@ public class CDiem {
 		y = scanner.nextFloat();
 	}
 
+	public CDiem Nhap(float x, float y) {
+		CDiem P = new CDiem(x, y);
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.print("Nhap x: ");
+//		P.x = scanner.nextFloat();
+//		System.out.print("Nhap y: ");
+//		P.y = scanner.nextFloat();
+		return P;
+	}
+
 	//////////// Nhóm phương thức cung cấp thông tin ////////////
 	public void Xuat() {
 		System.out.println("Xuat x: " + x);
 		System.out.println("Xuat y: " + y);
 		System.out.println("Toa diem da nhap: (" + x + "," + y + ")");
+	}
+
+	public CDiem Xuat(CDiem P) {
+		System.out.println("x = " + P.getX());
+		System.out.println("y = " + P.getY());
+		System.out.println("Toa diem da nhap: (" + P.getX() + "," + P.getY() + ")");
+		return P;
 	}
 
 	public float getX() {

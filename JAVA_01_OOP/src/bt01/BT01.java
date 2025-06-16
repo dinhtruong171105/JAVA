@@ -19,14 +19,17 @@ public class BT01 {
 
 		System.out.println("\nNhap toa do diem thu nhat:");
 		P.Nhap();
+		P = P.Nhap(0, 0);
 		System.out.println("\nNhap toa do diem thu hai:");
 		Q.Nhap();
+//		Q = P;
 
 		//////////// Nhóm phương thức cung cấp thông tin ////////////
 		System.out.println("\nToa do diem thu nhat: ");
 		P.Xuat();
 		System.out.println("\nToa do diem thu hai: ");
 		Q.Xuat();
+
 		System.out.println("\nLay gia tri x cua diem thu nhat: " + P.getX());
 		System.out.println("Lay gia tri y cua diem thu nhat: " + P.getY());
 
@@ -37,6 +40,7 @@ public class BT01 {
 		P.setY(6);
 		System.out.println("Gia tri x cua diem thu nhat sau khi cap nhat: " + P.getX());
 		System.out.println("Gia tri y cua diem thu nhat sau khi cap nhat: " + P.getY());
+		P.Xuat();
 
 		//////////// Nhóm phương thức kiểm tra ////////////
 		System.out.println("\nDiem thu nhat trung goc: " + P.ktTrungGoc());
@@ -52,6 +56,8 @@ public class BT01 {
 		System.out.println("Diem thu nhat thuoc goc phan tu thu 4: " + P.ktThuoc4());
 
 		System.out.println("\nDiem thu nhat bang diem thu hai: " + P.equal(Q));
+		System.out.println(P.KhoangCachGoc());
+		System.out.println(Q.KhoangCachGoc());
 		System.out.println("Diem thu nhat khong bang diem thu hai: " + P.not_equal(Q));
 		System.out.println("Diem thu nhat lon hon diem thu hai: " + P.greater(Q));
 		System.out.println("Diem thu nhat lon hon hoặc bằng diem thu hai: " + P.greater_equal(Q));
