@@ -20,7 +20,7 @@ public class CDiem {
 		y = P.y;
 	}
 
-////////////Nhóm phương thức thiết lập////////////
+	//////////// Nhóm phương thức thiết lập////////////
 	// 1. Default Constructor
 	CDiem() {
 		x = 0;
