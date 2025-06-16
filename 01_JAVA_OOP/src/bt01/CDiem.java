@@ -183,7 +183,4 @@ public class CDiem {
 		temp.y = -y;
 		return temp;
 	}
-
-	// Phương thức phá hủy
-
 }
