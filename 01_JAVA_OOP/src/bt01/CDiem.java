@@ -45,7 +45,6 @@ public class CDiem {
 		x = scanner.nextFloat();
 		System.out.print("Nhap y: ");
 		y = scanner.nextFloat();
-		// scanner.close();
 	}
 
 	//////////// Nhóm phương thức cung cấp thông tin ////////////
@@ -73,58 +72,64 @@ public class CDiem {
 	}
 
 	//////////// Nhóm phương thức kiểm tra ////////////
-	public int ktTrungGoc() {
-		if (x == 0 && y == 0)
-			return 1;
-		return 0;
+	public boolean ktTrungGoc() {
+		return x == 0 && y == 0;
 	}
 
-	public int ktTrung(CDiem P) {
-		if (x == P.x && y == P.y)
-			return 1;
-		return 0;
+	public boolean ktTrung(CDiem P) {
+		return x == P.x && y == P.y;
 	}
 
-	public int ktKhongTrung(CDiem P) {
-		if (!(x == P.x && y == P.y))
-			return 1;
-		return 0;
+	public boolean ktKhongTrung(CDiem P) {
+		return !(x == P.x && y == P.y);
 	}
 
-	public int ktThuocHoanh() {
-		if (y == 0)
-			return 1;
-		return 0;
+	public boolean ktThuocHoanh() {
+		return y == 0;
 	}
 
-	public int ktThuocTung() {
-		if (x == 0)
-			return 1;
-		return 0;
+	public boolean ktThuocTung() {
+		return x == 0;
 	}
 
-	public int ktThuoc1() {
-		if (x > 0 && y > 0)
-			return 1;
-		return 0;
+	public boolean ktThuoc1() {
+		return x > 0 && y > 0;
 	}
 
-	public int ktThuoc2() {
-		if (x < 0 && y > 0)
-			return 1;
-		return 0;
+	public boolean ktThuoc2() {
+		return x < 0 && y > 0;
 	}
 
-	public int ktThuoc3() {
-		if (x < 0 && y < 0)
-			return 1;
-		return 0;
+	public boolean ktThuoc3() {
+		return x < 0 && y < 0;
 	}
 
-	public int ktThuoc4() {
-		if (x > 0 && y < 0)
-			return 1;
-		return 0;
+	public boolean ktThuoc4() {
+		return x > 0 && y < 0;
+	}
+
+	public boolean equal(CDiem P) {
+		return KhoangCachGoc() == P.KhoangCachGoc();
+	}
+
+	public boolean not_equal(CDiem P) {
+		return KhoangCachGoc() != P.KhoangCachGoc();
+	}
+
+	public boolean greater(CDiem P) {
+		return KhoangCachGoc() > P.KhoangCachGoc();
+	}
+
+	public boolean greater_equal(CDiem P) {
+		return KhoangCachGoc() >= P.KhoangCachGoc();
+	}
+
+	public boolean less(CDiem P) {
+		return KhoangCachGoc() < P.KhoangCachGoc();
+	}
+
+	public boolean less_equal(CDiem P) {
+		return KhoangCachGoc() <= P.KhoangCachGoc();
 	}
 
 	//////////// Nhóm phương thức xử lý ////////////
@@ -144,7 +149,41 @@ public class CDiem {
 		return (float) Math.abs(y - P.y);
 	}
 
-//	public CDiem DoiXungGoc() {
-//
-//	}
+	CDiem DoiXungGoc() {
+		CDiem temp = new CDiem();
+		temp.x = -x;
+		temp.y = -y;
+		return temp;
+	}
+
+	CDiem DoiXungHoanh() {
+		CDiem temp = new CDiem();
+		temp.x = x;
+		temp.y = -y;
+		return temp;
+	}
+
+	CDiem DoiXungTung() {
+		CDiem temp = new CDiem();
+		temp.x = -x;
+		temp.y = y;
+		return temp;
+	}
+
+	CDiem DoiXungPhanGiac1() {
+		CDiem temp = new CDiem();
+		temp.x = x;
+		temp.y = y;
+		return temp;
+	}
+
+	CDiem DoiXungPhanGiac2() {
+		CDiem temp = new CDiem();
+		temp.x = -x;
+		temp.y = -y;
+		return temp;
+	}
+
+	// Phương thức phá hủy
+
 }
