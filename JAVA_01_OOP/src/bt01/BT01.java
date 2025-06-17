@@ -2,6 +2,15 @@ package bt01;
 
 public class BT01 {
 
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		//////////// Nhóm phương thức khởi tạo ////////////
 //		CDiem P = new P.KhoiTao();
@@ -63,6 +72,26 @@ public class BT01 {
 		System.out.println("Diem thu nhat lon hon hoặc bằng diem thu hai: " + P.greater_equal(Q));
 		System.out.println("Diem thu nhat nho hon diem thu hai: " + P.less(Q));
 		System.out.println("Diem thu nhat nho hon hoặc bằng diem thu hai: " + P.less_equal(Q));
-	}
 
+		System.out.println("\nDiem doi xung voi diem thu nhat qua goc toa do: ");
+		CDiem A = new CDiem();
+		A = P.DoiXungGoc();
+		A.Xuat();
+		System.out.println("\nDiem doi xung voi diem thu nhat qua truc hoanh: ");
+		CDiem B = new CDiem();
+		B = P.DoiXungHoanh();
+		B.Xuat();
+		System.out.println("\nDiem doi xung voi diem thu nhat qua truc tung: ");
+		CDiem C = new CDiem();
+		C = P.DoiXungTung();
+		C.Xuat();
+		System.out.println("\nDiem doi xung voi diem thu nhat qua duong phan giac 1: ");
+		CDiem D = new CDiem();
+		D = P.DoiXungPhanGiac1();
+		D.Xuat();
+		System.out.println("\nDiem doi xung voi diem thu nhat qua duong phan giac 2: ");
+		CDiem E = new CDiem();
+		E = P.DoiXungPhanGiac2();
+		E.Xuat();
+	}
 }

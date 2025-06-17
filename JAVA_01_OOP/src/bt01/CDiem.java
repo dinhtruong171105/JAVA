@@ -60,13 +60,13 @@ public class CDiem {
 	public void Xuat() {
 		System.out.println("Xuat x: " + x);
 		System.out.println("Xuat y: " + y);
-		System.out.println("Toa diem da nhap: (" + x + "," + y + ")");
+		System.out.println("Toa do diem: (" + x + "," + y + ")");
 	}
 
 	public CDiem Xuat(CDiem P) {
 		System.out.println("x = " + P.getX());
 		System.out.println("y = " + P.getY());
-		System.out.println("Toa diem da nhap: (" + P.getX() + "," + P.getY() + ")");
+		System.out.println("Toa do diem: (" + P.getX() + "," + P.getY() + ")");
 		return P;
 	}
 
