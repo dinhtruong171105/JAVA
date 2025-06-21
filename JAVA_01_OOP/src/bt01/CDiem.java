@@ -6,20 +6,6 @@ public class CDiem {
 
 	private float x, y;
 
-	//////////// Nhóm phương thức khởi tạo////////////
-	public void KhoiTao() {
-	}
-
-	public void KhoiTao(float xx, float yy) {
-		x = xx;
-		y = yy;
-	}
-
-	public void KhoiTao(CDiem P) {
-		x = P.x;
-		y = P.y;
-	}
-
 	//////////// Nhóm phương thức thiết lập////////////
 	// 1. Default Constructor
 	public CDiem() {
@@ -27,23 +13,26 @@ public class CDiem {
 	}
 
 	// 2. Parameterized Constructor
-	public CDiem(float xx, float yy) {
-		x = xx;
-		y = yy;
+	public CDiem(float x, float y) {
+		this.x = x;
+		this.y = y;
 	}
 
 	// 3. Copy Constructor
 	public CDiem(CDiem P) {
-		x = P.x;
-		y = P.y;
+		this.x = P.x;
+		this.y = P.y;
 	}
 
 	public void Nhap() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Nhap x: ");
-		x = scanner.nextFloat();
-		System.out.print("Nhap y: ");
-		y = scanner.nextFloat();
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Nhap x: ");
+			x = scanner.nextFloat();
+			System.out.print("Nhap y: ");
+			y = scanner.nextFloat();
+		} catch (Exception e) {
+
+		}
 	}
 
 	public CDiem Nhap(float x, float y) {
@@ -57,34 +46,34 @@ public class CDiem {
 	}
 
 	//////////// Nhóm phương thức cung cấp thông tin ////////////
-	public void Xuat() {
-		System.out.println("Xuat x: " + x);
-		System.out.println("Xuat y: " + y);
-		System.out.println("Toa do diem: (" + x + "," + y + ")");
-	}
-
-	public CDiem Xuat(CDiem P) {
-		System.out.println("x = " + P.getX());
-		System.out.println("y = " + P.getY());
-		System.out.println("Toa do diem: (" + P.getX() + "," + P.getY() + ")");
-		return P;
-	}
-
-	public float getX() {
+	public float GetX() {
 		return x;
 	}
 
-	public float getY() {
+	public float GetY() {
 		return y;
 	}
 
-	//////////// Nhóm phương thức cập nhật thông tin ////////////
-	public void setX(float xx) {
-		x = xx;
+	public void Xuat() {
+		System.out.println("Xuat x: " + GetX());
+		System.out.println("Xuat y: " + GetY());
+		System.out.println("Toa do diem: (" + GetX() + "," + GetY() + ")");
 	}
 
-	public void setY(float yy) {
-		y = yy;
+	public CDiem Xuat(CDiem P) {
+		System.out.println("x = " + P.GetX());
+		System.out.println("y = " + P.GetY());
+		System.out.println("Toa do diem: (" + P.GetX() + "," + P.GetY() + ")");
+		return P;
+	}
+
+	//////////// Nhóm phương thức cập nhật thông tin ////////////
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public void setY(float y) {
+		this.y = y;
 	}
 
 	//////////// Nhóm phương thức kiểm tra ////////////
@@ -128,7 +117,7 @@ public class CDiem {
 		return KhoangCachGoc() == P.KhoangCachGoc();
 	}
 
-	public boolean not_equal(CDiem P) {
+	public boolean NotEqual(CDiem P) {
 		return KhoangCachGoc() != P.KhoangCachGoc();
 	}
 

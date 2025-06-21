@@ -14,6 +14,11 @@ public class CStudent {
 		ID = id;
 	}
 
+	@Override
+	public String toString() {
+		return "CStudent [Name=" + Name + ", ID=" + ID + "]";
+	}
+
 	public CStudent(CStudent A) {
 		Name = A.Name;
 		ID = A.ID;

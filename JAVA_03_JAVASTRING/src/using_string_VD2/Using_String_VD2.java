@@ -33,6 +33,8 @@ public class Using_String_VD2 {
 			a.add(student);
 		}
 
+		System.out.println(a);
+
 		System.out.println("\nNhung hoc sinh co ten bat dau la Nguyen:");
 		for (CStudent i : a)
 			if (i.getName().startsWith("Nguyen"))
