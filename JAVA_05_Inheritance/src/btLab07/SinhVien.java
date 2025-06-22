@@ -1,5 +1,5 @@
 package btLab07;
 
-public class SinhVien {
-
+public abstract class SinhVien {
+	abstract double getScore();
 }
